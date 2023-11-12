@@ -1,75 +1,42 @@
-import { Link } from "react-router-dom"
+import banner1 from "./../../assets/img/banner/banner1.jpg"
+import banner2 from "./../../assets/img/banner/banner2.jpg"
+import about1 from "./../../assets/img/about1.jpg"
+import event1 from "./../../assets/img/event1.jpg"
+import event2 from "./../../assets/img/event2.jpg"
+import event3 from "./../../assets/img/event3.jpg"
+import event4 from "./../../assets/img/event4.jpg"
+import event5 from "./../../assets/img/event5.jpg"
+import event6 from "./../../assets/img/event6.jpg"
+import product1 from "./../../assets/img/product1.jpg"
+import product2 from "./../../assets/img/product2.jpg"
+import product3 from "./../../assets/img/product3.jpg"
+import product4 from "./../../assets/img/product4.jpg"
+import product5 from "./../../assets/img/product5.jpg"
+import product6 from "./../../assets/img/product6.jpg"
+import carousel1 from "./../../assets/img/carousel1.jpg"
+import imgCategori1 from "./../../assets/img/icon/icon-5.png"
+import imgCategori2 from "./../../assets/img/icon/icon-4.png"
+import imgCategori3 from "./../../assets/img/icon/icon-9.png"
+
+import { HeaderComponent, TopbarComponent } from "../../components"
+import { FaSpa, FaBitbucket, FaMagic } from "react-icons/fa";
 
 export const HomePage = () => {
     return (
         <>
             {/* <div id="spinner" className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-                <div className="spinner-border text-primary" role="status" style={{"width: 3rem; height: 3rem;"></di}}v>
+                <div className="spinner-border text-primary" role="status" style={{ 'width': '3rem', 'height': '3rem' }}></div>
             </div> */}
 
-            {/* Topbar Start */}
-            <div className="container-fluid bg-dark text-light px-0 py-2">
-                <div className="row gx-0 d-none d-lg-flex">
-                    <div className="col-lg-7 px-5 text-start">
-                        <div className="h-100 d-inline-flex align-items-center me-4">
-                            <span className="fa fa-phone-alt me-2"></span>
-                            <span>+012 345 6789</span>
-                        </div>
-                        <div className="h-100 d-inline-flex align-items-center">
-                            <span className="far fa-envelope me-2"></span>
-                            <span>info@example.com</span>
-                        </div>
-                    </div>
-                    <div className="col-lg-5 px-5 text-end">
-                        <div className="h-100 d-inline-flex align-items-center mx-n2">
-                            <span>Follow Us:</span>
-                            <a className="btn btn-link text-light" href=""><i className="fab fa-facebook-f"></i></a>
-                            <a className="btn btn-link text-light" href=""><i className="fab fa-twitter"></i></a>
-                            <a className="btn btn-link text-light" href=""><i className="fab fa-linkedin-in"></i></a>
-                            <a className="btn btn-link text-light" href=""><i className="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* Topbar End */}
-
-            {/* Navbar Start */}
-            <nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-                <Link to="/" className="navbar-brand d-flex align-items-center px-4 px-lg-5">
-                    <h1 className="m-0">Gardener</h1>
-                </Link>
-                <button type="button" className="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarCollapse">
-                    <div className="navbar-nav ms-auto p-4 p-lg-0">
-                        <Link to="/" className="nav-item nav-link active">Home</Link>
-                        <Link to="/about" className="nav-item nav-link">About</Link>
-                        <Link to="/service" className="nav-item nav-link">Services</Link>
-                        <Link to="/project" className="nav-item nav-link">Projects</Link>
-                        <div className="nav-item dropdown">
-                            <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div className="dropdown-menu bg-light m-0">
-                                <a href="feature.html" className="dropdown-item">Features</a>
-                                <a href="quote.html" className="dropdown-item">Free Quote</a>
-                                <a href="team.html" className="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" className="dropdown-item">Testimonial</a>
-                                <a href="404.html" className="dropdown-item">404 Page</a>
-                            </div>
-                        </div>
-                        <Link to="/contact" className="nav-item nav-link">Contact</Link>
-                    </div>
-                    <a href="" className="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Get A Quote<i className="fa fa-arrow-right ms-3"></i></a>
-                </div>
-            </nav>
-            {/* Navbar End */}
+            <TopbarComponent />
+            <HeaderComponent />
 
             {/* Carousel Start  */}
             <div className="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
                 <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active">
-                            <img className="w-100" src="https://images.unsplash.com/photo-1683009686716-ac2096a5a73b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHx8" alt="Image" />
+                            <img className="w-100" src={banner1} alt="Image" />
                             <div className="carousel-caption">
                                 <div className="container">
                                     <div className="row justify-content-center">
@@ -82,12 +49,12 @@ export const HomePage = () => {
                             </div>
                         </div>
                         <div className="carousel-item">
-                            <img className="w-100" src="img/carousel-2.jpg" alt="Image" />
+                            <img className="w-100" src={banner2} alt="Image" />
                             <div className="carousel-caption">
                                 <div className="container">
                                     <div className="row justify-content-center">
                                         <div className="col-lg-7">
-                                            <h1 className="display-1 text-white mb-5 animated slideInDown">Create Your Own Small Garden At Home</h1>
+                                            <h1 className="display-1 text-white mb-5 animated slideInDown">Be Productive, Not Busy.</h1>
                                             <a href="" className="btn btn-primary py-sm-3 px-sm-4">Explore More</a>
                                         </div>
                                     </div>
@@ -117,10 +84,10 @@ export const HomePage = () => {
                             <div className="bg-white shadow d-flex align-items-center h-100 px-5" style={{ 'minHeight': '160px' }}>
                                 <div className="d-flex">
                                     <div className="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                        <i className="fa fa-times text-primary"></i>
+                                        <FaSpa className="text-primary" />
                                     </div>
                                     <div className="ps-3">
-                                        <h4>No Hidden Cost</h4>
+                                        <h4>Menjual Tanaman Terrarium</h4>
                                         <span>Clita erat ipsum lorem sit sed stet duo justo</span>
                                     </div>
                                 </div>
@@ -132,10 +99,10 @@ export const HomePage = () => {
                             }}>
                                 <div className="d-flex">
                                     <div className="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                        <i className="fa fa-users text-primary"></i>
+                                        <FaBitbucket className="text-primary" />
                                     </div>
                                     <div className="ps-3">
-                                        <h4>Dedicated Team</h4>
+                                        <h4>Aksesoris & Alat</h4>
                                         <span>Clita erat ipsum lorem sit sed stet duo justo</span>
                                     </div>
                                 </div>
@@ -147,10 +114,10 @@ export const HomePage = () => {
                             }}>
                                 <div className="d-flex">
                                     <div className="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                        <i className="fa fa-phone text-primary"></i>
+                                        <FaMagic className="text-primary" />
                                     </div>
                                     <div className="ps-3">
-                                        <h4>24/7 Available</h4>
+                                        <h4>Custom Pesanan</h4>
                                         <span>Clita erat ipsum lorem sit sed stet duo justo</span>
                                     </div>
                                 </div>
@@ -166,7 +133,7 @@ export const HomePage = () => {
                 <div className="container">
                     <div className="row g-5 align-items-end">
                         <div className="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
-                            <img className="img-fluid rounded" data-wow-delay="0.1s" src="img/about.jpg" />
+                            <img className="img-fluid rounded" data-wow-delay="0.1s" src={about1} />
                         </div>
                         <div className="col-lg-6 col-md-7 wow fadeInUp" data-wow-delay="0.3s">
                             <h1 className="display-1 text-primary mb-0">25</h1>
@@ -199,7 +166,7 @@ export const HomePage = () => {
             {/* About Start */}
 
             {/* Facts Start */}
-            <div className="container-fluid facts my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-1.jpg">
+            <div className="container-fluid facts my-5 py-5" data-parallax="scroll" data-image-src={carousel1}>
                 <div className="container py-5">
                     <div className="row g-5">
                         <div className="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
@@ -275,20 +242,20 @@ export const HomePage = () => {
             <div className="container-xxl py-5">
                 <div className="container">
                     <div className="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style={{ 'maxWidth': '500px' }}>
-                        <p className="fs-5 fw-bold text-primary">Our Services</p>
-                        <h1 className="display-5 mb-5">Services That We Offer For You</h1>
+                        <p className="fs-5 fw-bold text-primary">Our Products</p>
+                        <h1 className="display-5 mb-5">Product Yang Kami Punya</h1>
                     </div>
                     <div className="row g-4">
                         <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div className="service-item rounded d-flex h-100">
                                 <div className="service-img rounded">
-                                    <img className="img-fluid" src="img/service-1.jpg" alt="" />
+                                    <img className="img-fluid" src={product1} alt="" />
                                 </div>
                                 <div className="service-text rounded p-5">
                                     <div className="btn-square rounded-circle mx-auto mb-3">
-                                        <img className="img-fluid" src="img/icon/icon-3.png" alt="Icon" />
+                                        <img className="img-fluid" src={imgCategori3} alt="Icon" />
                                     </div>
-                                    <h4 className="mb-3">Landscaping</h4>
+                                    <h4 className="mb-3">Pot Bentuk Rumah</h4>
                                     <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
                                     <a className="btn btn-sm" href=""><i className="fa fa-plus text-primary me-2"></i>Read More</a>
                                 </div>
@@ -297,13 +264,13 @@ export const HomePage = () => {
                         <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div className="service-item rounded d-flex h-100">
                                 <div className="service-img rounded">
-                                    <img className="img-fluid" src="img/service-2.jpg" alt="" />
+                                    <img className="img-fluid" src={product2} alt="" />
                                 </div>
                                 <div className="service-text rounded p-5">
                                     <div className="btn-square rounded-circle mx-auto mb-3">
-                                        <img className="img-fluid" src="img/icon/icon-6.png" alt="Icon" />
+                                        <img className="img-fluid" src={imgCategori1} alt="Icon" />
                                     </div>
-                                    <h4 className="mb-3">Pruning plants</h4>
+                                    <h4 className="mb-3">Preserved Moss</h4>
                                     <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
                                     <a className="btn btn-sm" href=""><i className="fa fa-plus text-primary me-2"></i>Read More</a>
                                 </div>
@@ -312,13 +279,13 @@ export const HomePage = () => {
                         <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                             <div className="service-item rounded d-flex h-100">
                                 <div className="service-img rounded">
-                                    <img className="img-fluid" src="img/service-3.jpg" alt="" />
+                                    <img className="img-fluid" src={product3} alt="" />
                                 </div>
                                 <div className="service-text rounded p-5">
                                     <div className="btn-square rounded-circle mx-auto mb-3">
-                                        <img className="img-fluid" src="img/icon/icon-5.png" alt="Icon" />
+                                        <img className="img-fluid" src={imgCategori3} alt="Icon" />
                                     </div>
-                                    <h4 className="mb-3">Irrigation & Drainage</h4>
+                                    <h4 className="mb-3">Miniatur Hewan Ternak</h4>
                                     <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
                                     <a className="btn btn-sm" href=""><i className="fa fa-plus text-primary me-2"></i>Read More</a>
                                 </div>
@@ -327,13 +294,13 @@ export const HomePage = () => {
                         <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div className="service-item rounded d-flex h-100">
                                 <div className="service-img rounded">
-                                    <img className="img-fluid" src="img/service-4.jpg" alt="" />
+                                    <img className="img-fluid" src={product4} alt="" />
                                 </div>
                                 <div className="service-text rounded p-5">
                                     <div className="btn-square rounded-circle mx-auto mb-3">
-                                        <img className="img-fluid" src="img/icon/icon-4.png" alt="Icon" />
+                                        <img className="img-fluid" src={imgCategori2} alt="Icon" />
                                     </div>
-                                    <h4 className="mb-3">Garden Maintenance </h4>
+                                    <h4 className="mb-3">COCOPEAT</h4>
                                     <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
                                     <a className="btn btn-sm" href=""><i className="fa fa-plus text-primary me-2"></i>Read More</a>
                                 </div>
@@ -342,13 +309,13 @@ export const HomePage = () => {
                         <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div className="service-item rounded d-flex h-100">
                                 <div className="service-img rounded">
-                                    <img className="img-fluid" src="img/service-5.jpg" alt="" />
+                                    <img className="img-fluid" src={product5} alt="" />
                                 </div>
                                 <div className="service-text rounded p-5">
                                     <div className="btn-square rounded-circle mx-auto mb-3">
-                                        <img className="img-fluid" src="img/icon/icon-8.png" alt="Icon" />
+                                        <img className="img-fluid" src={imgCategori3} alt="Icon" />
                                     </div>
-                                    <h4 className="mb-3">Green Technology</h4>
+                                    <h4 className="mb-3">Pot Terracotta Motif Hewan</h4>
                                     <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
                                     <a className="btn btn-sm" href=""><i className="fa fa-plus text-primary me-2"></i>Read More</a>
                                 </div>
@@ -357,13 +324,13 @@ export const HomePage = () => {
                         <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                             <div className="service-item rounded d-flex h-100">
                                 <div className="service-img rounded">
-                                    <img className="img-fluid" src="img/service-6.jpg" alt="" />
+                                    <img className="img-fluid" src={product6} alt="" />
                                 </div>
                                 <div className="service-text rounded p-5">
                                     <div className="btn-square rounded-circle mx-auto mb-3">
-                                        <img className="img-fluid" src="img/icon/icon-2.png" alt="Icon" />
+                                        <img className="img-fluid" src={imgCategori3} alt="Icon" />
                                     </div>
-                                    <h4 className="mb-3">Urban Gardening</h4>
+                                    <h4 className="mb-3">Hiasan Love Beruang</h4>
                                     <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
                                     <a className="btn btn-sm" href=""><i className="fa fa-plus text-primary me-2"></i>Read More</a>
                                 </div>
@@ -371,11 +338,14 @@ export const HomePage = () => {
                         </div>
                     </div>
                 </div>
+                <div className="text-center">
+                    <a href="" className="btn btn-primary my-4 py-sm-3 px-sm-4">Selengkapnya</a>
+                </div>
             </div>
             {/* Service End */}
 
             {/* Quote Start */}
-            <div className="container-fluid quote my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
+            {/* <div className="container-fluid quote my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
                 <div className="container py-5">
                     <div className="row justify-content-center">
                         <div className="col-lg-7">
@@ -420,7 +390,7 @@ export const HomePage = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* Quote End */}
 
             {/* Projects Start  */}
@@ -429,8 +399,8 @@ export const HomePage = () => {
                     <div className="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style={{
                         'maxWidth': '500px'
                     }}>
-                        <p className="fs-5 fw-bold text-primary">Our Projects</p>
-                        <h1 className="display-5 mb-5">Some Of Our Wonderful Projects</h1>
+                        <p className="fs-5 fw-bold text-primary">Event</p>
+                        <h1 className="display-5 mb-5">Ayo Ikuti Event Kami</h1>
                     </div>
                     <div className="row wow fadeInUp" data-wow-delay="0.3s">
                         <div className="col-12 text-center">
@@ -444,11 +414,11 @@ export const HomePage = () => {
                     <div className="row g-4 portfolio-container">
                         <div className="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
                             <div className="portfolio-inner rounded">
-                                <img className="img-fluid" src="img/service-1.jpg" alt="" />
+                                <img className="img-fluid" src={event1} alt="" />
                                 <div className="portfolio-text">
                                     <h4 className="text-white mb-4">Landscaping</h4>
                                     <div className="d-flex">
-                                        <a className="btn btn-lg-square rounded-circle mx-2" href="img/service-1.jpg" data-lightbox="portfolio"><i className="fa fa-eye"></i></a>
+                                        <a className="btn btn-lg-square rounded-circle mx-2" href={event1} data-lightbox="portfolio"><i className="fa fa-eye"></i></a>
                                         <a className="btn btn-lg-square rounded-circle mx-2" href=""><i className="fa fa-link"></i></a>
                                     </div>
                                 </div>
@@ -456,11 +426,11 @@ export const HomePage = () => {
                         </div>
                         <div className="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
                             <div className="portfolio-inner rounded">
-                                <img className="img-fluid" src="img/service-2.jpg" alt="" />
+                                <img className="img-fluid" src={event2} alt="" />
                                 <div className="portfolio-text">
                                     <h4 className="text-white mb-4">Pruning plants</h4>
                                     <div className="d-flex">
-                                        <a className="btn btn-lg-square rounded-circle mx-2" href="img/service-2.jpg" data-lightbox="portfolio"><i className="fa fa-eye"></i></a>
+                                        <a className="btn btn-lg-square rounded-circle mx-2" href={event2} data-lightbox="portfolio"><i className="fa fa-eye"></i></a>
                                         <a className="btn btn-lg-square rounded-circle mx-2" href=""><i className="fa fa-link"></i></a>
                                     </div>
                                 </div>
@@ -468,11 +438,11 @@ export const HomePage = () => {
                         </div>
                         <div className="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
                             <div className="portfolio-inner rounded">
-                                <img className="img-fluid" src="img/service-3.jpg" alt="" />
+                                <img className="img-fluid" src={event3} alt="" />
                                 <div className="portfolio-text">
                                     <h4 className="text-white mb-4">Irrigation & Drainage</h4>
                                     <div className="d-flex">
-                                        <a className="btn btn-lg-square rounded-circle mx-2" href="img/service-3.jpg" data-lightbox="portfolio"><i className="fa fa-eye"></i></a>
+                                        <a className="btn btn-lg-square rounded-circle mx-2" href={event3} data-lightbox="portfolio"><i className="fa fa-eye"></i></a>
                                         <a className="btn btn-lg-square rounded-circle mx-2" href=""><i className="fa fa-link"></i></a>
                                     </div>
                                 </div>
@@ -480,11 +450,11 @@ export const HomePage = () => {
                         </div>
                         <div className="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
                             <div className="portfolio-inner rounded">
-                                <img className="img-fluid" src="img/service-4.jpg" alt="" />
+                                <img className="img-fluid" src={event4} alt="" />
                                 <div className="portfolio-text">
                                     <h4 className="text-white mb-4">Garden Maintenance</h4>
                                     <div className="d-flex">
-                                        <a className="btn btn-lg-square rounded-circle mx-2" href="img/service-4.jpg" data-lightbox="portfolio"><i className="fa fa-eye"></i></a>
+                                        <a className="btn btn-lg-square rounded-circle mx-2" href={event4} data-lightbox="portfolio"><i className="fa fa-eye"></i></a>
                                         <a className="btn btn-lg-square rounded-circle mx-2" href=""><i className="fa fa-link"></i></a>
                                     </div>
                                 </div>
@@ -492,11 +462,11 @@ export const HomePage = () => {
                         </div>
                         <div className="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
                             <div className="portfolio-inner rounded">
-                                <img className="img-fluid" src="img/service-5.jpg" alt="" />
+                                <img className="img-fluid" src={event5} alt="" />
                                 <div className="portfolio-text">
                                     <h4 className="text-white mb-4">Green Technology</h4>
                                     <div className="d-flex">
-                                        <a className="btn btn-lg-square rounded-circle mx-2" href="img/service-5.jpg" data-lightbox="portfolio"><i className="fa fa-eye"></i></a>
+                                        <a className="btn btn-lg-square rounded-circle mx-2" href={event5} data-lightbox="portfolio"><i className="fa fa-eye"></i></a>
                                         <a className="btn btn-lg-square rounded-circle mx-2" href=""><i className="fa fa-link"></i></a>
                                     </div>
                                 </div>
@@ -504,11 +474,11 @@ export const HomePage = () => {
                         </div>
                         <div className="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
                             <div className="portfolio-inner rounded">
-                                <img className="img-fluid" src="img/service-6.jpg" alt="" />
+                                <img className="img-fluid" src={event6} alt="" />
                                 <div className="portfolio-text">
                                     <h4 className="text-white mb-4">Urban Gardening</h4>
                                     <div className="d-flex">
-                                        <a className="btn btn-lg-square rounded-circle mx-2" href="img/service-6.jpg" data-lightbox="portfolio"><i className="fa fa-eye"></i></a>
+                                        <a className="btn btn-lg-square rounded-circle mx-2" href={event6} data-lightbox="portfolio"><i className="fa fa-eye"></i></a>
                                         <a className="btn btn-lg-square rounded-circle mx-2" href=""><i className="fa fa-link"></i></a>
                                     </div>
                                 </div>
@@ -520,7 +490,7 @@ export const HomePage = () => {
             {/* Projects End  */}
 
             {/* Team Start  */}
-            <div className="container-xxl py-5">
+            {/* <div className="container-xxl py-5">
                 <div className="container">
                     <div className="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style={{ 'maxWidth': '500px' }}>
                         <p className="fs-5 fw-bold text-primary">Our Team</p>
@@ -571,11 +541,11 @@ export const HomePage = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* Team End  */}
 
             {/* Testimonial Start */}
-            <div className="container-xxl py-5">
+            {/* <div className="container-xxl py-5">
                 <div className="container">
                     <div className="row g-5">
                         <div className="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -602,7 +572,7 @@ export const HomePage = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* Testimonial End */}
 
             {/* Footer Start */}
