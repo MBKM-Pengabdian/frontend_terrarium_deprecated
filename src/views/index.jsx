@@ -3,6 +3,7 @@ import { ContactPage } from "./contact_page";
 import { HomePage } from "./home_page";
 import { ProjectsPage } from "./projects_page";
 import { ServicePage } from "./service_page";
+import { ProductPage } from "./product_page";
 
 
-export { HomePage, AboutPage, ServicePage, ProjectsPage, ContactPage }
+export { HomePage, AboutPage, ServicePage, ProjectsPage, ContactPage, ProductPage }
