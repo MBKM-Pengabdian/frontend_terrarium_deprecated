@@ -18,7 +18,6 @@ import imgCategori1 from "./../../assets/img/icon/icon-5.png"
 import imgCategori2 from "./../../assets/img/icon/icon-4.png"
 import imgCategori3 from "./../../assets/img/icon/icon-9.png"
 
-import { HeaderComponent, TopbarComponent } from "../../components"
 import { FaSpa, FaBitbucket, FaMagic } from "react-icons/fa";
 
 export const HomePage = () => {
@@ -27,9 +26,6 @@ export const HomePage = () => {
             {/* <div id="spinner" className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
                 <div className="spinner-border text-primary" role="status" style={{ 'width': '3rem', 'height': '3rem' }}></div>
             </div> */}
-
-            <TopbarComponent />
-            <HeaderComponent />
 
             {/* Carousel Start  */}
             <div className="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
@@ -344,55 +340,6 @@ export const HomePage = () => {
             </div>
             {/* Service End */}
 
-            {/* Quote Start */}
-            {/* <div className="container-fluid quote my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
-                <div className="container py-5">
-                    <div className="row justify-content-center">
-                        <div className="col-lg-7">
-                            <div className="bg-white rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
-                                <h1 className="display-5 text-center mb-5">Get A Free Quote</h1>
-                                <div className="row g-3">
-                                    <div className="col-sm-6">
-                                        <div className="form-floating">
-                                            <input type="text" className="form-control bg-light border-0" id="gname" placeholder="Gurdian Name" />
-                                            <label htmlFor="gname">Your Name</label>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-6">
-                                        <div className="form-floating">
-                                            <input type="email" className="form-control bg-light border-0" id="gmail" placeholder="Gurdian Email" />
-                                            <label htmlFor="gmail">Your Email</label>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-6">
-                                        <div className="form-floating">
-                                            <input type="text" className="form-control bg-light border-0" id="cname" placeholder="Child Name" />
-                                            <label htmlFor="cname">Your Mobile</label>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-6">
-                                        <div className="form-floating">
-                                            <input type="text" className="form-control bg-light border-0" id="cage" placeholder="Child Age" />
-                                            <label htmlFor="cage">Service Type</label>
-                                        </div>
-                                    </div>
-                                    <div className="col-12">
-                                        <div className="form-floating">
-                                            <textarea className="form-control bg-light border-0" placeholder="Leave a message here" id="message" style={{ 'height': '100px' }}></textarea>
-                                            <label htmlFor="message">Message</label>
-                                        </div>
-                                    </div>
-                                    <div className="col-12 text-center">
-                                        <button className="btn btn-primary py-3 px-4" type="submit">Submit Now</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-            {/* Quote End */}
-
             {/* Projects Start  */}
             <div className="container-xxl py-5">
                 <div className="container">
@@ -488,153 +435,6 @@ export const HomePage = () => {
                 </div>
             </div >
             {/* Projects End  */}
-
-            {/* Team Start  */}
-            {/* <div className="container-xxl py-5">
-                <div className="container">
-                    <div className="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style={{ 'maxWidth': '500px' }}>
-                        <p className="fs-5 fw-bold text-primary">Our Team</p>
-                        <h1 className="display-5 mb-5">Dedicated & Experienced Team Members</h1>
-                    </div>
-                    <div className="row g-4">
-                        <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div className="team-item rounded">
-                                <img className="img-fluid" src="img/team-1.jpg" alt="" />
-                                <div className="team-text">
-                                    <h4 className="mb-0">Doris Jordan</h4>
-                                    <p className="text-primary">Landscape Designer</p>
-                                    <div className="team-social d-flex">
-                                        <a className="btn btn-square rounded-circle me-2" href=""><i className="fab fa-facebook-f"></i></a>
-                                        <a className="btn btn-square rounded-circle me-2" href=""><i className="fab fa-twitter"></i></a>
-                                        <a className="btn btn-square rounded-circle me-2" href=""><i className="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <div className="team-item rounded">
-                                <img className="img-fluid" src="img/team-2.jpg" alt="" />
-                                <div className="team-text">
-                                    <h4 className="mb-0">Johnny Ramirez</h4>
-                                    <p className="text-primary">Garden Designer</p>
-                                    <div className="team-social d-flex">
-                                        <a className="btn btn-square rounded-circle me-2" href=""><i className="fab fa-facebook-f"></i></a>
-                                        <a className="btn btn-square rounded-circle me-2" href=""><i className="fab fa-twitter"></i></a>
-                                        <a className="btn btn-square rounded-circle me-2" href=""><i className="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                            <div className="team-item rounded">
-                                <img className="img-fluid" src="img/team-3.jpg" alt="" />
-                                <div className="team-text">
-                                    <h4 className="mb-0">Diana Wagner</h4>
-                                    <p className="text-primary">Senior Gardener</p>
-                                    <div className="team-social d-flex">
-                                        <a className="btn btn-square rounded-circle me-2" href=""><i className="fab fa-facebook-f"></i></a>
-                                        <a className="btn btn-square rounded-circle me-2" href=""><i className="fab fa-twitter"></i></a>
-                                        <a className="btn btn-square rounded-circle me-2" href=""><i className="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-            {/* Team End  */}
-
-            {/* Testimonial Start */}
-            {/* <div className="container-xxl py-5">
-                <div className="container">
-                    <div className="row g-5">
-                        <div className="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
-                            <p className="fs-5 fw-bold text-primary">Testimonial</p>
-                            <h1 className="display-5 mb-5">What Our Clients Say About Us!</h1>
-                            <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo justo.</p>
-                            <a className="btn btn-primary py-3 px-4" href="">See More</a>
-                        </div>
-                        <div className="col-lg-7 wow fadeInUp" data-wow-delay="0.5s">
-                            <div className="owl-carousel testimonial-carousel">
-                                <div className="testimonial-item">
-                                    <img className="img-fluid rounded mb-3" src="img/testimonial-1.jpg" alt="" />
-                                    <p className="fs-5">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                                    <h4>Client Name</h4>
-                                    <span>Profession</span>
-                                </div>
-                                <div className="testimonial-item">
-                                    <img className="img-fluid rounded mb-3" src="img/testimonial-2.jpg" alt="" />
-                                    <p className="fs-5">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                                    <h4>Client Name</h4>
-                                    <span>Profession</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-            {/* Testimonial End */}
-
-            {/* Footer Start */}
-            <div className="container-fluid bg-dark text-light footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
-                <div className="container py-5">
-                    <div className="row g-5">
-                        <div className="col-lg-3 col-md-6">
-                            <h4 className="text-white mb-4">Our Office</h4>
-                            <p className="mb-2"><i className="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                            <p className="mb-2"><i className="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                            <p className="mb-2"><i className="fa fa-envelope me-3"></i>info@example.com</p>
-                            <div className="d-flex pt-2">
-                                <a className="btn btn-square btn-outline-light rounded-circle me-2" href=""><i className="fab fa-twitter"></i></a>
-                                <a className="btn btn-square btn-outline-light rounded-circle me-2" href=""><i className="fab fa-facebook-f"></i></a>
-                                <a className="btn btn-square btn-outline-light rounded-circle me-2" href=""><i className="fab fa-youtube"></i></a>
-                                <a className="btn btn-square btn-outline-light rounded-circle me-2" href=""><i className="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-md-6">
-                            <h4 className="text-white mb-4">Services</h4>
-                            <a className="btn btn-link" href="">Landscaping</a>
-                            <a className="btn btn-link" href="">Pruning plants</a>
-                            <a className="btn btn-link" href="">Urban Gardening</a>
-                            <a className="btn btn-link" href="">Garden Maintenance</a>
-                            <a className="btn btn-link" href="">Green Technology</a>
-                        </div>
-                        <div className="col-lg-3 col-md-6">
-                            <h4 className="text-white mb-4">Quick Links</h4>
-                            <a className="btn btn-link" href="">About Us</a>
-                            <a className="btn btn-link" href="">Contact Us</a>
-                            <a className="btn btn-link" href="">Our Services</a>
-                            <a className="btn btn-link" href="">Terms & Condition</a>
-                            <a className="btn btn-link" href="">Support</a>
-                        </div>
-                        <div className="col-lg-3 col-md-6">
-                            <h4 className="text-white mb-4">Newsletter</h4>
-                            <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                            <div className="position-relative w-100">
-                                <input className="form-control bg-light border-light w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
-                                <button type="button" className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* Footer End */}
-
-            {/* Copyright Start */}
-            <div className="container-fluid copyright py-4">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a className="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-                        </div>
-                        <div className="col-md-6 text-center text-md-end">
-                            Designed By <a className="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* Copyright Start */}
-
         </>
     )
 }

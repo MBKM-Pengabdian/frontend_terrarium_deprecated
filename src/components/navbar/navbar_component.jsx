@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-export const HeaderComponent = () => {
+export const NavbarComponent = () => {
     return (
         <>
             {/* Navbar Start */}
@@ -17,20 +17,10 @@ export const HeaderComponent = () => {
                         <Link to="/" className="nav-item nav-link">About</Link>
                         <Link to="/" className="nav-item nav-link">Services</Link>
                         <Link to="/" className="nav-item nav-link">Projects</Link>
+                        <Link to="/product" className="nav-item nav-link">Product</Link>
                         <Link to="/" className="nav-item nav-link">Event</Link>
-                        {/* <div className="nav-item dropdown">
-                            <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div className="dropdown-menu bg-light m-0">
-                                <a href="feature.html" className="dropdown-item">Features</a>
-                                <a href="quote.html" className="dropdown-item">Free Quote</a>
-                                <a href="team.html" className="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" className="dropdown-item">Testimonial</a>
-                                <a href="404.html" className="dropdown-item">404 Page</a>
-                            </div>
-                        </div> */}
                         <Link to="/" className="nav-item nav-link">Contact</Link>
                     </div>
-                    {/* <a href="" className="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Get A Quote<i className="fa fa-arrow-right ms-3"></i></a> */}
                 </div>
             </nav>
             {/* Navbar End */}
