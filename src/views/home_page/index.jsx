@@ -43,6 +43,7 @@ export const HomePage = () => {
                                     </div>
                                 </div>
                             </div>
+                            <h1>Tes</h1>
                         </div>
                         <div className="carousel-item">
                             <img className="w-100" src={banner2} alt="Image" />
