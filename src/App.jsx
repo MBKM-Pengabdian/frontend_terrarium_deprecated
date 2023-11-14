@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import { AboutPage, ContactPage, HomePage, ProjectsPage, ServicePage, ProductPage } from './views'
+import { AboutPage, ContactPage, HomePage, ProjectsPage, ServicePage, ProductPage, EventPage } from './views'
 import { NavbarComponent, TopbarComponent, FooterComponent, CopyrightComponent } from './components'
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
         <Route path="/project" element={<ProjectsPage />} />
         <Route path="/product" element={<ProductPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/event" element={<EventPage />} />
       </Routes>
       <FooterComponent />
       <CopyrightComponent />
