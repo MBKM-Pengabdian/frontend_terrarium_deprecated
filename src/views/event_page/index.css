@@ -1,0 +1,12 @@
+.square-box {
+            position: relative;
+            overflow: hidden;
+            width: 430px; /* Atur lebar sesuai kebutuhan */
+            height: 240px; /* Atur tinggi sesuai kebutuhan */
+        }
+
+        .square-box img {
+            width: 100%;
+            height: auto; /* Biarkan tinggi otomatis agar gambar tidak terlihat "gepeng" */
+            object-fit: cover;
+        }

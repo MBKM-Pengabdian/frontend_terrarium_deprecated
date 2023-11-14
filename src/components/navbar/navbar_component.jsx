@@ -18,7 +18,7 @@ export const NavbarComponent = () => {
                         <Link to="/" className="nav-item nav-link">Services</Link>
                         <Link to="/" className="nav-item nav-link">Projects</Link>
                         <Link to="/product" className="nav-item nav-link">Product</Link>
-                        <Link to="/" className="nav-item nav-link">Event</Link>
+                        <Link to="/event" className="nav-item nav-link">Event</Link>
                         <Link to="/" className="nav-item nav-link">Contact</Link>
                     </div>
                 </div>
