@@ -5,7 +5,6 @@ import star from "./../../../../assets/img/icon/star.png";
 // eslint-disable-next-line react/prop-types, no-unused-vars
 const CardComponent = ({ products, onPageChange }) => {
    const [expanded] = useState({});
-
    return (
       <>
          {products.map((product) => (
