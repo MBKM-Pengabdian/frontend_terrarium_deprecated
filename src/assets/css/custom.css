@@ -1,0 +1,17 @@
+ .btn-check:focus+.btn,
+ .btn:focus {
+    box-shadow: none !important;
+ }
+
+ ul {
+    list-style-type: none;
+ }
+
+ .page-link {
+    color: #1e4a3c;
+ }
+
+ .page-item.active .page-link {
+    background-color: #1e4a3c;
+    border-color: #1e4a3c;
+ }

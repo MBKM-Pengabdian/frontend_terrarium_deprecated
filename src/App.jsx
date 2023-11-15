@@ -1,12 +1,11 @@
 import { Route, Routes } from 'react-router-dom'
 import { AboutPage, ContactPage, HomePage, ProjectsPage, ServicePage, ProductPage, EventPage } from './views'
-import { NavbarComponent, TopbarComponent, FooterComponent, CopyrightComponent } from './components'
+import { NavbarComponent, FooterComponent } from './components'
 
 function App() {
 
   return (
     <>
-      <TopbarComponent />
       <NavbarComponent />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -18,7 +17,6 @@ function App() {
         <Route path="/event" element={<EventPage />} />
       </Routes>
       <FooterComponent />
-      <CopyrightComponent />
     </>
   )
 }
