@@ -1,6 +1,7 @@
 import { FaList, FaCalendarCheck, FaPlay, FaClock } from "react-icons/fa";
 import './index.css'
 import { CardComponent } from "./components";
+
 import { useState } from "react";
 
 export const EventPage = () => {
@@ -69,9 +70,6 @@ export const EventPage = () => {
     ])
     const [selectStatus, setSelectStatus] = useState('')
 
-
-
-
     return (
         <>
             <div className="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
@@ -129,7 +127,6 @@ export const EventPage = () => {
                                 ))
                         )
                     }
-
                 </div>
             </div>
         </>

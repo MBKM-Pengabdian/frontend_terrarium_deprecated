@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom"
 import event1 from "../../../../assets/img/event1.jpg"
 
@@ -23,6 +24,7 @@ export const CardComponent = ({ data }) => {
                         <div className="col">
                             <span className="alert alert-primary py-1 px-3 me-3" style={{ borderRadius: '13px' }}>Tumbuhan</span>
                             <span className="alert alert-primary py-1 px-3 me-3" style={{ borderRadius: '13px' }}>Flora</span>
+
                         </div>
                         <div className="col mt-4 text-end">
                             <Link to='/detail-event' className="btn btn-lg btn-primary fw-bold fs-6 w-50">Detail</Link>
