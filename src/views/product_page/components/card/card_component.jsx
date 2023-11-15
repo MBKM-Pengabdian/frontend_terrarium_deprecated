@@ -1,44 +1,47 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import PaginationComponent from './../pagination/pagination_component';
+/* eslint-disable react/prop-types */
+import { useState } from 'react';
 
-// eslint-disable-next-line react/prop-types
-export const CardComponent = ({ currentPage, onPageChange }) => {
-   const [products, setProducts] = useState([]);
-   const [totalPages, setTotalPages] = useState(1);
+// eslint-disable-next-line react/prop-types, no-unused-vars
+const CardComponent = ({ products, onPageChange }) => {
+   const [expanded, setExpanded] = useState({});
 
-   const fetchProducts = async (page) => {
-      const itemsPerPage = 20;
-      const skip = (page - 1) * itemsPerPage;
-
-      try {
-         const response = await axios.get(`https://dummyjson.com/products?skip=${skip}&limit=${itemsPerPage}`);
-         setProducts(response.data.products);
-         setTotalPages(Math.ceil(response.data.total / itemsPerPage));
-      } catch (error) {
-         console.error('Error fetching data:', error);
-      }
+   const toggleDescription = (productId) => {
+      setExpanded((prevExpanded) => ({
+         ...prevExpanded,
+         [productId]: !prevExpanded[productId],
+      }));
    };
 
-   useEffect(() => {
-      fetchProducts(currentPage);
-   }, [currentPage]);
-
    return (
-      <div>
-         {products.map(product => (
-            <div key={product.id} className="card mt-4">
-               <img src={product.thumbnail} className="card-img-top" alt={product.title} />
-               <div className="card-body">
-                  <h5 className="card-title">{product.title}</h5>
-                  <p className="card-text">{product.description}</p>
-                  <a href="#" className="btn btn-primary">Go somewhere</a>
+      <>
+         {products.map((product) => (
+            <div key={product.id} className="col-lg-3 col-md-4 col-sm-6 mb-4">
+               <div className="card border-0" style={{ height: "100%" }}>
+                  <img
+                     src={product.thumbnail}
+                     className="card-img-top img-fluid"
+                     alt={product.title}
+                     style={{ objectFit: "cover" }}
+                  />
+                  <div className="card-body d-flex flex-column">
+                     <h6 className="card-title jakarta-sans text-secondary">{product.title}</h6>
+                     <p className="card-text jakarta-sans text-secondary">
+                        {expanded[product.id]
+                           ? product.description
+                           : `${product.description.slice(0, 25)}...`}
+                     </p>
+                     <a
+                        className="btn bg-primary mt-auto jakarta-sans text-light"
+                        onClick={() => toggleDescription(product.id)}
+                     >
+                        {expanded[product.id] ? 'Read less' : 'Read more'}
+                     </a>
+                  </div>
                </div>
             </div>
          ))}
-
-         {/* Pagination controls */}
-         <PaginationComponent totalPages={totalPages} currentPage={currentPage} onPageChange={onPageChange} />
-      </div>
+      </>
    );
 };
+
+export default CardComponent;
