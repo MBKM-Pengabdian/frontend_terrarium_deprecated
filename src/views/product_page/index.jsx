@@ -14,7 +14,7 @@ export const ProductPage = () => {
    };
 
    const fetchProducts = async (page) => {
-      const itemsPerPage = 4;
+      const itemsPerPage = 15;
       const skip = (page - 1) * itemsPerPage;
 
       try {
