@@ -13,13 +13,13 @@ export const NavbarComponent = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarCollapse">
                     <div className="navbar-nav ms-auto p-4 p-lg-0">
-                        <Link to="/" className="nav-item nav-link jakarta-sans">Home</Link>
-                        <Link to="/" className="nav-item nav-link jakarta-sans">About</Link>
-                        <Link to="/" className="nav-item nav-link jakarta-sans">Services</Link>
-                        <Link to="/" className="nav-item nav-link jakarta-sans">Projects</Link>
-                        <Link to="/product" className="nav-item nav-link jakarta-sans">Product</Link>
-                        <Link to="/" className="nav-item nav-link jakarta-sans">Event</Link>
-                        <Link to="/" className="nav-item nav-link jakarta-sans">Contact</Link>
+                        <Link to="/" className="nav-item nav-link active">Home</Link>
+                        <Link to="/" className="nav-item nav-link">About</Link>
+                        <Link to="/" className="nav-item nav-link">Services</Link>
+                        <Link to="/" className="nav-item nav-link">Projects</Link>
+                        <Link to="/product" className="nav-item nav-link">Product</Link>
+                        <Link to="/event" className="nav-item nav-link">Event</Link>
+                        <Link to="/" className="nav-item nav-link">Contact</Link>
                     </div>
                 </div>
             </nav>
