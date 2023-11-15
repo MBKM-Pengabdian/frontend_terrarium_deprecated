@@ -1,12 +1,20 @@
 .square-box {
-            position: relative;
-            overflow: hidden;
-            width: 430px; /* Atur lebar sesuai kebutuhan */
-            height: 240px; /* Atur tinggi sesuai kebutuhan */
-        }
+    position: relative;
+    overflow: hidden;
+    width: 430px; /* Atur lebar sesuai kebutuhan */
+    height: 240px; /* Atur tinggi sesuai kebutuhan */
+}
 
-        .square-box img {
-            width: 100%;
-            height: auto; /* Biarkan tinggi otomatis agar gambar tidak terlihat "gepeng" */
-            object-fit: cover;
-        }
+.square-box img {
+    width: 100%;
+    height: auto; /* Biarkan tinggi otomatis agar gambar tidak terlihat "gepeng" */
+    object-fit: cover;
+}
+
+.circle-timeline {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 11px;
+  text-align: center;
+}
