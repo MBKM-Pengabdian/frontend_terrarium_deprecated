@@ -15,7 +15,7 @@ function App() {
         <Route path="/product" element={<ProductPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/event" element={<EventPage />} />
-        <Route path="/detail-event" element={<DetailEvent />} />
+        <Route path="/detail-event/:id" element={<DetailEvent />} />
       </Routes>
       <FooterComponent />
     </>
