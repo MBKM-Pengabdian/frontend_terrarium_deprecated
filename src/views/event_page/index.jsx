@@ -80,42 +80,43 @@ export const EventPage = () => {
 
             <div className="container">
                 <div className="row mb-4">
-                    <div className="col-lg-2 my-2 wow fadeIn" data-wow-delay="0.1s">
-                        <div className="row bg-light p-2 shadow m-auto">
-                            <div className="col-3 m-auto">
-                                <FaList className="fs-5" />
+                    <div className="col-lg-2 mt-2 wow fadeIn" data-wow-delay="0.1s" style={{ maxWidth: '195px' }}>
+                        <div className="row p-2 shadow-sm m-auto">
+                            <div className="col-3 m-auto" style={{ maxWidth: '30px' }}>
+                                <FaList className="fs-6 text-primary" />
                             </div>
-                            <div className="col fw-bold text-center fs-6" style={{ cursor: 'pointer' }} onClick={() => setSelectStatus('')}>Semua</div>
+                            <div className="col fs-6 text-primary" style={{ cursor: 'pointer' }} onClick={() => setSelectStatus('')}>Semua</div>
                         </div>
                     </div>
-                    <div className="col-lg-2 my-2 wow fadeIn" data-wow-delay="0.3s">
-                        <div className="row bg-light p-2 shadow m-auto">
-                            <div className="col-3 m-auto">
-                                <FaPlay className="fs-5" />
+                    <div className="col-lg-2 mt-2 wow fadeIn" data-wow-delay="0.1s" style={{ maxWidth: '195px' }}>
+                        <div className="row p-2 shadow-sm m-auto">
+                            <div className="col-3 m-auto" style={{ maxWidth: '30px' }}>
+                                <FaPlay className="fs-6 text-primary" />
                             </div>
-                            <div className="col fw-bold text-center fs-6" style={{ cursor: 'pointer' }} onClick={() => setSelectStatus('1')}>Berlangsung</div>
+                            <div className="col fs-6 text-primary" style={{ cursor: 'pointer' }} onClick={() => setSelectStatus('1')}>Berlangsung</div>
                         </div>
                     </div>
-                    <div className="col-lg-2 my-2 wow fadeIn" data-wow-delay="0.5s">
-                        <div className="row bg-light p-2 shadow m-auto">
-                            <div className="col-3 m-auto">
-                                <FaClock className="fs-5" />
+                    <div className="col-lg-2 mt-2 wow fadeIn" data-wow-delay="0.1s" style={{ maxWidth: '195px' }}>
+                        <div className="row p-2 shadow-sm m-auto">
+                            <div className="col-3 m-auto" style={{ maxWidth: '30px' }}>
+                                <FaClock className="fs-6 text-primary" />
                             </div>
-                            <div className="col fw-bold text-center fs-6" style={{ cursor: 'pointer' }} onClick={() => setSelectStatus('2')}>Akan Datang</div>
+                            <div className="col fs-6 text-primary" style={{ cursor: 'pointer' }} onClick={() => setSelectStatus('2')}>Akan Datang</div>
                         </div>
                     </div>
-                    <div className="col-lg-2 my-2 wow fadeIn" data-wow-delay="0.7s">
-                        <div className="row bg-light p-2 shadow m-auto">
-                            <div className="col-3 m-auto">
-                                <FaCalendarCheck className="fs-5" />
+                    <div className="col-lg-2 mt-2 wow fadeIn" data-wow-delay="0.1s" style={{ maxWidth: '195px' }}>
+                        <div className="row p-2 shadow-sm m-auto">
+                            <div className="col-3 m-auto" style={{ maxWidth: '30px' }}>
+                                <FaCalendarCheck className="fs-6 text-primary" />
                             </div>
-                            <div className="col fw-bold text-center fs-6" style={{ cursor: 'pointer' }} onClick={() => setSelectStatus('3')}>Selesai</div>
+                            <div className="col fs-6 text-primary" style={{ cursor: 'pointer' }} onClick={() => setSelectStatus('3')}>Selesai</div>
                         </div>
-                    </div>
+                    </div >
+
                 </div>
 
                 {/* EVENT SECTION */}
-                <div className="row p-3 pt-0">
+                <div className="row p-3 pt-0" >
                     {
                         dataEvent && (
                             selectStatus == ""
