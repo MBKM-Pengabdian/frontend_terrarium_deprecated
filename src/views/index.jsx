@@ -5,6 +5,6 @@ import { ProjectsPage } from "./projects_page";
 import { ServicePage } from "./service_page";
 import { ProductPage } from "./product_page";
 import { EventPage } from "./event_page";
-import { DetailEvent } from "./event_page/event_detail/detail_event";
+import { DetailEvent } from "./event_page/event_detail";
 
 export { HomePage, AboutPage, ServicePage, ProjectsPage, ContactPage, ProductPage, EventPage, DetailEvent }

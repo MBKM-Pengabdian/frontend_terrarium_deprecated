@@ -2,72 +2,26 @@ import { FaList, FaCalendarCheck, FaPlay, FaClock } from "react-icons/fa";
 import './index.css'
 import { CardComponent } from "./components";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export const EventPage = () => {
-    const [dataEvent, setDataEvent] = useState([
-        {
-            img: '',
-            title: 'Terrarium Workshop',
-            price: 'Free',
-            ket: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, suscipit omnis reiciendis veniam, aut atque dolor iure est ex a ipsa excepturi! Animi voluptatum adipisci, mollitia a odit fugit ipsum?',
-            tglEvent: '20 November, 2023',
-            jamEvent: '09:00',
-            tag: 'Tumbuhan,flora',
-            status: '1' //berlangsung
-        },
-        {
-            img: '',
-            title: 'Terrarium Workshop',
-            price: '30.000',
-            ket: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, suscipit omnis reiciendis veniam, aut atque dolor iure est ex a ipsa excepturi! Animi voluptatum adipisci, mollitia a odit fugit ipsum?',
-            tglEvent: 'Coming Soon!',
-            jamEvent: '',
-            tag: 'Tumbuhan,flora',
-            status: '2' //akan datang
-        },
-        {
-            img: '',
-            title: 'Terrarium Workshop',
-            price: '60.000',
-            ket: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, suscipit omnis reiciendis veniam, aut atque dolor iure est ex a ipsa excepturi! Animi voluptatum adipisci, mollitia a odit fugit ipsum?',
-            tglEvent: '20 November, 2023',
-            jamEvent: '09:00',
-            tag: 'Tumbuhan,flora',
-            status: '3' //selesai
-        },
-        {
-            img: '',
-            title: 'Terrarium Workshop',
-            price: 'Free',
-            ket: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, suscipit omnis reiciendis veniam, aut atque dolor iure est ex a ipsa excepturi! Animi voluptatum adipisci, mollitia a odit fugit ipsum?',
-            tglEvent: '20 November, 2023',
-            jamEvent: '09:00',
-            tag: 'Tumbuhan,flora',
-            status: '1' //berlangsung
-        },
-        {
-            img: '',
-            title: 'Terrarium Workshop',
-            price: 'Free',
-            ket: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, suscipit omnis reiciendis veniam, aut atque dolor iure est ex a ipsa excepturi! Animi voluptatum adipisci, mollitia a odit fugit ipsum?',
-            tglEvent: 'Coming Soon!',
-            jamEvent: '',
-            tag: 'Tumbuhan,flora',
-            status: '2' //akan datang
-        },
-        {
-            img: '',
-            title: 'Terrarium Workshop',
-            price: '20.000',
-            ket: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, suscipit omnis reiciendis veniam, aut atque dolor iure est ex a ipsa excepturi! Animi voluptatum adipisci, mollitia a odit fugit ipsum?',
-            tglEvent: '20 November, 2023',
-            jamEvent: '09:00',
-            tag: 'Tumbuhan,flora',
-            status: '3' //selesai
-        },
 
-    ])
+    useEffect(() => {
+        getListEvent()
+    }, [])
+
+
+    const getListEvent = () => {
+        axios.get('https://server-testing-terrarium.vercel.app/listEvent').then((data) => {
+            console.log(data.data);
+            setDataEvent(data.data)
+        }).catch((err) => {
+            console.log(err);
+        })
+    }
+
+    const [dataEvent, setDataEvent] = useState()
     const [selectStatus, setSelectStatus] = useState('')
 
     return (
@@ -123,7 +77,7 @@ export const EventPage = () => {
                                 ? dataEvent.map((res, index) => (
                                     <CardComponent key={index} data={res} />
                                 ))
-                                : dataEvent.filter(data => data.status === selectStatus).map((res, index) => (
+                                : dataEvent.filter(data => data.status_event === selectStatus).map((res, index) => (
                                     <CardComponent key={index} data={res} />
                                 ))
                         )
