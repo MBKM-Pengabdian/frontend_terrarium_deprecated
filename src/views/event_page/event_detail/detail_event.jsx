@@ -1,6 +1,6 @@
 import { useState } from "react";
-import event1 from "./../../assets/img/event1.jpg";
-import './index.css'
+import event1 from "./../../../assets/img/event1.jpg";
+import './../index.css'
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export const DetailEvent = () => {
@@ -33,15 +33,15 @@ export const DetailEvent = () => {
                         </div>
                     </div>
                     <div className="col pt-3 d-flex flex-column" style={{ minWidth: '200px' }}>
-                        <div className="text-primary fw-bold fs-6">20 November, 2023 | 09:00</div>
-                        <div className="title-event fw-bold fs-3">Terrarium Workshop</div>
+                        <div className="text-primary fs-6">20 November, 2023 | 09:00</div>
+                        <h3 className="title-event text-primary fs-3">Terrarium Workshop</h3>
                         <div className="fw-bold mb-4">Share:
                             <span> <FaFacebook className="fs-5 mx-1" /></span>
                             <span> <FaInstagram className="fs-5 mx-1" /></span>
                             <span> <FaTwitter className="fs-5 mx-1" /></span>
                         </div>
                         <div className="mt-auto mb-3">
-                            <button className="btn btn-lg btn-primary w-100 fw-bold">Daftar Sekarang</button>
+                            <button className="btn btn-lg bg-primary text-light w-100 fw-bold fs-6">Daftar Sekarang</button>
                         </div>
                     </div>
 
@@ -97,7 +97,7 @@ export const DetailEvent = () => {
                     <h4 id="timeline">Timeline</h4>
                     <div className="timeline-event mb-5">
                         <div className="row mb-4">
-                            <div className="col-1" style={{ minWidth: '100px' }}>
+                            <div className="col-1" style={{ width: '80px' }}>
                                 <div className="circle-timeline p-auto alert-danger d-flex align-items-center justify-content-center text-danger fw-bold border border-danger">09:00 <br />AM</div>
                             </div>
                             <div className="col m-auto">
@@ -106,7 +106,7 @@ export const DetailEvent = () => {
                             </div>
                         </div>
                         <div className="row mb-4">
-                            <div className="col-1" style={{ minWidth: '100px' }}>
+                            <div className="col-1" style={{ width: '80px' }}>
                                 <div className="circle-timeline p-auto alert-primary d-flex align-items-center justify-content-center text-primary fw-bold border border-primary">10:45 <br />AM</div>
                             </div>
                             <div className="col m-auto">
@@ -115,7 +115,7 @@ export const DetailEvent = () => {
                             </div>
                         </div>
                         <div className="row mb-4">
-                            <div className="col-1" style={{ minWidth: '100px' }}>
+                            <div className="col-1" style={{ width: '80px' }}>
                                 <div className="circle-timeline p-auto alert-warning d-flex align-items-center justify-content-center text-warning fw-bold border border-warning">13:00 <br />PM</div>
                             </div>
                             <div className="col m-auto">
@@ -124,7 +124,7 @@ export const DetailEvent = () => {
                             </div>
                         </div>
                         <div className="row mb-4">
-                            <div className="col-1" style={{ minWidth: '100px' }}>
+                            <div className="col-1" style={{ width: '80px' }}>
                                 <div className="circle-timeline p-auto alert-dark d-flex align-items-center justify-content-center text-dark fw-bold border border-dark">15:30 <br />PM</div>
                             </div>
                             <div className="col m-auto">
