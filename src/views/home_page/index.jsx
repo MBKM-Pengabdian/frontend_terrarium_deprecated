@@ -17,10 +17,27 @@ import carousel1 from "./../../assets/img/carousel1.jpg"
 import imgCategori1 from "./../../assets/img/icon/icon-5.png"
 import imgCategori2 from "./../../assets/img/icon/icon-4.png"
 import imgCategori3 from "./../../assets/img/icon/icon-9.png"
-
 import { FaSpa, FaBitbucket, FaMagic } from "react-icons/fa";
+import { getAllproduct } from "./../../service/api_product"
+import { useEffect, useState } from "react"
 
 export const HomePage = () => {
+    const [listProduct, setListProduct] = useState([])
+
+    useEffect(() => {
+        handleGetProduct()
+    }, [])
+
+    const handleGetProduct = async () => {
+        try {
+            const responseProduct = await getAllproduct();
+            setListProduct(responseProduct.data)
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+
     return (
         <>
             {/* <div id="spinner" className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -43,7 +60,6 @@ export const HomePage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <h1>Tes</h1>
                         </div>
                         <div className="carousel-item">
                             <img className="w-100" src={banner2} alt="Image" />
@@ -243,96 +259,25 @@ export const HomePage = () => {
                         <h1 className="display-5 mb-5">Product Yang Kami Punya</h1>
                     </div>
                     <div className="row g-4">
-                        <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div className="service-item rounded d-flex h-100">
-                                <div className="service-img rounded">
-                                    <img className="img-fluid" src={product1} alt="" />
-                                </div>
-                                <div className="service-text rounded p-5">
-                                    <div className="btn-square rounded-circle mx-auto mb-3">
-                                        <img className="img-fluid" src={imgCategori3} alt="Icon" />
+                        {
+                            listProduct.map((data, index) => (
+                                <div key={index} className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                    <div className="service-item rounded d-flex h-100">
+                                        <div className="service-img rounded">
+                                            <img className="img-fluid" src={product1} alt="" />
+                                        </div>
+                                        <div className="service-text rounded p-5">
+                                            <div className="btn-square rounded-circle mx-auto mb-3">
+                                                <img className="img-fluid" src={imgCategori3} alt="Icon" />
+                                            </div>
+                                            <h4 className="mb-3">{data.product_name}</h4>
+                                            <p className="mb-4">{data.description}</p>
+                                            <a className="btn btn-sm" href=""><i className="fa fa-plus text-primary me-2"></i>Read More</a>
+                                        </div>
                                     </div>
-                                    <h4 className="mb-3">Pot Bentuk Rumah</h4>
-                                    <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                                    <a className="btn btn-sm" href=""><i className="fa fa-plus text-primary me-2"></i>Read More</a>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <div className="service-item rounded d-flex h-100">
-                                <div className="service-img rounded">
-                                    <img className="img-fluid" src={product2} alt="" />
-                                </div>
-                                <div className="service-text rounded p-5">
-                                    <div className="btn-square rounded-circle mx-auto mb-3">
-                                        <img className="img-fluid" src={imgCategori1} alt="Icon" />
-                                    </div>
-                                    <h4 className="mb-3">Preserved Moss</h4>
-                                    <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                                    <a className="btn btn-sm" href=""><i className="fa fa-plus text-primary me-2"></i>Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                            <div className="service-item rounded d-flex h-100">
-                                <div className="service-img rounded">
-                                    <img className="img-fluid" src={product3} alt="" />
-                                </div>
-                                <div className="service-text rounded p-5">
-                                    <div className="btn-square rounded-circle mx-auto mb-3">
-                                        <img className="img-fluid" src={imgCategori3} alt="Icon" />
-                                    </div>
-                                    <h4 className="mb-3">Miniatur Hewan Ternak</h4>
-                                    <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                                    <a className="btn btn-sm" href=""><i className="fa fa-plus text-primary me-2"></i>Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div className="service-item rounded d-flex h-100">
-                                <div className="service-img rounded">
-                                    <img className="img-fluid" src={product4} alt="" />
-                                </div>
-                                <div className="service-text rounded p-5">
-                                    <div className="btn-square rounded-circle mx-auto mb-3">
-                                        <img className="img-fluid" src={imgCategori2} alt="Icon" />
-                                    </div>
-                                    <h4 className="mb-3">COCOPEAT</h4>
-                                    <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                                    <a className="btn btn-sm" href=""><i className="fa fa-plus text-primary me-2"></i>Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <div className="service-item rounded d-flex h-100">
-                                <div className="service-img rounded">
-                                    <img className="img-fluid" src={product5} alt="" />
-                                </div>
-                                <div className="service-text rounded p-5">
-                                    <div className="btn-square rounded-circle mx-auto mb-3">
-                                        <img className="img-fluid" src={imgCategori3} alt="Icon" />
-                                    </div>
-                                    <h4 className="mb-3">Pot Terracotta Motif Hewan</h4>
-                                    <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                                    <a className="btn btn-sm" href=""><i className="fa fa-plus text-primary me-2"></i>Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                            <div className="service-item rounded d-flex h-100">
-                                <div className="service-img rounded">
-                                    <img className="img-fluid" src={product6} alt="" />
-                                </div>
-                                <div className="service-text rounded p-5">
-                                    <div className="btn-square rounded-circle mx-auto mb-3">
-                                        <img className="img-fluid" src={imgCategori3} alt="Icon" />
-                                    </div>
-                                    <h4 className="mb-3">Hiasan Love Beruang</h4>
-                                    <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                                    <a className="btn btn-sm" href=""><i className="fa fa-plus text-primary me-2"></i>Read More</a>
-                                </div>
-                            </div>
-                        </div>
+                            )).slice(0, 6)
+                        }
                     </div>
                 </div>
                 <div className="text-center">
